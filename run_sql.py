@@ -69,7 +69,9 @@ def get_sql(file_path: str) -> str:
 def main() -> None:
     path_to_db, path_to_sql, path_to_csv = get_paths()
     conn = create_connection(path_to_db)
+    print(conn)
     sql = get_sql(path_to_sql)
+    print(sql)
     
     if sql == "-- Add your SQL here" or sql == "":
         print("Error: Add your sql to the sql/fashion_magazines.sql file before running.")
